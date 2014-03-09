@@ -1,0 +1,10 @@
+
+
+#ui
+    ul.timerNew
+        li
+          timer(interval='1000', countdown='countdownVal', autostart='false') {{millis | date:'mm:ss'}}
+        li.control(ng-click='startClock()', ng-disabled='timerRunning') Start/Resume
+        li.control(ng-click='stopClock()', ng-disabled='!timerRunning') Stop
+        li.control(ng-click='resetClock()') Reset
+

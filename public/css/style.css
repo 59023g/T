@@ -1,0 +1,375 @@
+@import "./bootstrap/bootstrap.min.css";
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-padding-start: 0;
+  -webkit-padding-after: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-end: 0;
+}
+html {
+  overflow: hidden;
+}
+body {
+  font-family: myriad pro;
+}
+ul {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+header {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+}
+header a {
+  color: #fff;
+}
+header .logo {
+  background: url("http://michaelepierce.com/out/T/tintlogo-vertical_web.svg");
+  height: 350px;
+  width: 350px;
+  left: 50%;
+  margin-left: -175px;
+  position: absolute;
+  top: 153px;
+  z-index: 999999999;
+  float: left;
+}
+header .logo -webkit-background-size 66px {
+  -o-background-size: 66px;
+  background-size: 66px;
+}
+header .links {
+  background-color: #ccc;
+  padding: 15px 30px;
+  position: absolute;
+  text-align: right;
+  right: 30px;
+  top: 30px;
+}
+header .links .above {
+  font-size: 1.2em;
+}
+header .links .below {
+  font-size: 1.5em;
+}
+header ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+header ul li:last-child {
+  margin-right: 0;
+}
+.container {
+  padding: 0;
+  width: 100%;
+}
+.container a {
+  color: #fff;
+}
+.container a i {
+  font-size: 100px;
+  display: inline-block;
+}
+.container .icn-hm-social-big {
+  display: inline-block;
+  height: 20%;
+  line-height: 1;
+  min-width: 100px;
+  text-align: center;
+  width: 10%;
+  vertical-align: top;
+}
+.container .info {
+  height: auto;
+  width: 30%;
+  background-color: #fff;
+  position: absolute;
+  left: 30px;
+  bottom: 50px;
+  z-index: 999999;
+  text-align: left;
+}
+.container .info p {
+  color: #333;
+  font-size: 2em;
+  line-height: 1em;
+  padding: 15px 30px;
+}
+.container .info .sub {
+  font-size: 1.2em;
+  padding: 0px 30px 5px 30px;
+}
+.container .info a {
+  color: #ff5349;
+  text-decoration: underline;
+}
+.fb {
+  background: #3b5998;
+}
+.fb:hover {
+  background: #2b4582;
+}
+.fb .logo {
+  float: left;
+  background-image: url("//d33w9bm0n1egwm.cloudfront.net/assets/logos/socialIcon.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 42px;
+  width: 16px;
+  margin-right: 10px;
+  height: 22px;
+}
+.fb.small .icn-hm {
+  margin-right: 8px;
+  margin-top: -3px;
+}
+.fb:active,
+.fb:focus,
+.fb.active {
+  background-color: #243d79;
+  background-image: none;
+  box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -moz-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+}
+button.fb,
+button.tw,
+button.yt,
+button.in,
+button.rss,
+button.gp,
+button.linkedin,
+button.vn,
+button.tb {
+  padding: 8px 20px;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 18px;
+  float: left;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+.fb:hover,
+.tw:hover,
+.yt:hover,
+button.in:hover,
+a.in:hover,
+.pn:hover,
+button.rss:hover,
+a.rss:hover,
+button.gp:hover,
+a.gp:hover,
+button.linkedin:hover,
+a.linkedin:hover,
+button.vn:hover,
+a.vn:hover,
+button.tb:hover,
+a.tb:hover {
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+button.fb.small,
+button.tw.small,
+button.yt.small,
+button.in.small {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 2px;
+}
+.tw {
+  background: #32c1f0;
+}
+.tw:hover {
+  background: #18b8ee;
+}
+.tw .logo {
+  float: left;
+  width: 36px;
+  height: 22px;
+  background-image: url("//d33w9bm0n1egwm.cloudfront.net/assets/logos/socialIcon.png");
+  background-repeat: no-repeat;
+  background-size: 42px;
+  background-position: -18px 0;
+}
+.tw.small .icn-hm {
+  margin-right: 12px;
+  margin-left: -22px;
+  margin-top: -4px;
+}
+.tw:active,
+.tw.active,
+.tw:focus {
+  background-color: #2088b4;
+  background-image: none;
+  box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -moz-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+}
+button.in,
+a.in {
+  background: #685c44;
+}
+button.in:hover,
+a.in:hover {
+  background: #524836;
+}
+button.in:active,
+a.in:active,
+button.in.active,
+a.in.active,
+button.in:focus,
+a.in:focus {
+  background-color: #423a2b;
+  background-image: none;
+  box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -moz-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+}
+.yt {
+  background: #ff1d1e;
+}
+.yt:hover {
+  background: #ce1111;
+}
+.yt.small .icn-hm {
+  margin-right: 10px;
+  margin-left: 2px;
+  margin-top: -4px;
+}
+.yt:active,
+.yt.active,
+.yt:focus {
+  background-color: #ff0001;
+  background-image: none;
+  box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -moz-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+}
+.pn {
+  background: #d43638;
+}
+.pn:hover {
+  background: #ce1111;
+}
+.pn:active,
+.pn.active,
+.pn:focus {
+  background-color: #ff0001;
+  background-image: none;
+  box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -moz-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+}
+button.rss,
+a.rss {
+  background: #ff6200;
+}
+button.rss:hover,
+a.rss:hover {
+  background: #d15000;
+}
+button.rss:active,
+a.rss:active,
+button.rss.active,
+a.rss.active,
+.rss:focus {
+  background-color: #d15000;
+  background-image: none;
+  box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -moz-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+}
+button.gp,
+a.gp {
+  background: #d34836;
+}
+button.gp:hover,
+a.gp:hover {
+  background: #ae3221;
+}
+button.gp:active,
+a.gp:active,
+button.gp.active,
+a.gp.active,
+.gp:focus {
+  background-color: #ae3221;
+  background-image: none;
+  box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -moz-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+}
+button.linkedin,
+a.linkedin {
+  background: #62b3db;
+}
+button.linkedin:hover,
+a.linkedin:hover {
+  background: #37a5db;
+}
+button.linkedin:active,
+a.linkedin:active,
+button.linkedin.active,
+a.linkedin.active,
+.linkedin:focus {
+  background-color: #37a5db;
+  background-image: none;
+  box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -moz-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+}
+button.vn,
+a.vn {
+  background: #26cca3;
+}
+button.vn:hover,
+a.vn:hover {
+  background: #00b386;
+}
+button.vn:active,
+a.vn:active,
+button.vn.active,
+a.vn.active,
+.vn:focus {
+  background-color: #00b386;
+  background-image: none;
+  box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -moz-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+}
+button.tb,
+a.tb {
+  background: #35465c;
+}
+button.tb:hover,
+a.tb:hover {
+  background: #536f9d;
+}
+button.tb:active,
+a.tb:active,
+button.tb.active,
+a.tb.active,
+.tb:focus {
+  background-color: #00b386;
+  background-image: none;
+  box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -moz-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(50,50,50,0.4);
+}
+.in.small .icn-hm {
+  margin-right: 12px;
+  margin-left: -22px;
+  margin-top: -4px;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "doUI",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "latest",
+    "jade": "latest",
+    "stylus": "latest",
+    "mongoose": "*",
+    "lodash": "latest",
+    "connect-mongo": "*",
+    "nib": "latest"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "bower": "latest"
+  }
+}
