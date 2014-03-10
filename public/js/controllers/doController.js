@@ -2,14 +2,14 @@
 
  angular.module('tint')
    .controller('doController', function($scope, $location) {
-   	   $RootScope.go = function (path, pageAnimationClass) {
+   	   $scope.go = function (path, pageAnimationClass) {
 
         if (typeof(pageAnimationClass) === 'undefined') { // Use a default, your choice
-            $RootScope.pageAnimationClass = 'crossFade';
+            $scope.pageAnimationClass = 'crossFade';
         }
         
         else { // Use the specified animation
-            $RootScope.pageAnimationClass = pageAnimationClass;
+            $scope.pageAnimationClass = pageAnimationClass;
         }
 
         if (path === 'back') { // Allow a 'back' keyword to go to previous page

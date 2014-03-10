@@ -21,6 +21,7 @@ var tint = angular.module('tint', [
       .when('/pricing', {
         templateUrl: 'partials/pricing',
         controller: 'doController',
+        css: 'css/learn.css'
         //animate: 'slideLeft'
       })
       .when('/one', {

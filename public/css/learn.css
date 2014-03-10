@@ -7,7 +7,10 @@
 }
 
 header {
-	z-index: 9999999
+	z-index: 9999999;
+	width: 40%;
+	float: right;
+	
 }
 header .links, header .links .above{
 		background-color: white;
@@ -35,16 +38,3 @@ header .links .above li a:hover {
 
 }
 
-.logo {
-	z-index: 9999999;
-	  	    float: left;
-    height: 65px;
-    margin-left: 15px;
-    width: 65px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    position: relative;
-    z-index: -9999999;
-    left: 0;
-    bottom: 0
-}
