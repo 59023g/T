@@ -10,9 +10,18 @@ html(ng-app="tint")
     link(rel='stylesheet', href='/bower_components/foundation-icons/foundation-icons.css')
 
 
+
+
+
+
   body
     header(ng-include="'/partials/nav'")
     .view(ng-view ng-class="pageAnimationClass")
+
+
+    script(type='text/javascript', src='//use.typekit.net/hvw3zbq.js')
+    script.
+        try{Typekit.load();}catch(e){}
 
     script(type='text/javascript', src='http://code.jquery.com/jquery-1.11.0.min.js')
     script(type='text/javascript', src='/js/misc.js')
