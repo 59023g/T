@@ -1,0 +1,40 @@
+.splash-acct-nav.clearfix, .info {
+	
+	-webkit-transition: opacity 1s ease-out;
+  opacity: 0; 
+	display: none
+	
+}
+
+header {
+	z-index: 9999999;
+	width: 40%;
+	float: right;
+	
+}
+header .links, header .links .above{
+		background-color: white;
+		color: #333
+}
+
+header a, header a:hover {
+	color: #333;
+
+}
+
+.links {
+
+}
+header .links .above li a {
+	color: #333
+}
+
+header .links .above li a:hover {
+	color: #333
+}
+
+.above {
+		background-color: white;
+
+}
+

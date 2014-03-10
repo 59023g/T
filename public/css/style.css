@@ -11,7 +11,8 @@
   -webkit-padding-end: 0;
 }
 html {
-  overflow: hidden;
+  min-height: 101%;
+  overflow-x: hidden;
 }
 body {
   font-family: myriad pro;
@@ -20,94 +21,191 @@ ul {
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
 }
+.logo {
+  background: url("http://michaelepierce.com/out/T/tintlogo-vertical_web.svg");
+  height: 350px;
+  width: 350px;
+  bottom: 100px;
+  left: 75%;
+  margin-left: -175px;
+  position: absolute;
+  z-index: 99999999999999;
+}
+.logo .home {
+  background: url("http://michaelepierce.com/out/T/tintlogo-vertical_web.svg");
+}
 header {
   float: left;
   position: relative;
   width: 100%;
   height: 100%;
-  background: #ccc;
 }
 header a {
   color: #fff;
 }
-header .logo {
-  background: url("http://michaelepierce.com/out/T/tintlogo-vertical_web.svg");
-  height: 350px;
-  width: 350px;
-  left: 50%;
-  margin-left: -175px;
-  position: absolute;
-  top: 153px;
-  z-index: 999999999;
-  float: left;
-}
-header .logo -webkit-background-size 66px {
-  -o-background-size: 66px;
-  background-size: 66px;
-}
 header .links {
-  background-color: #ccc;
-  padding: 15px 30px;
-  position: absolute;
+  background-color: #000;
+  float: right;
+  height: 90px;
+  list-style: 1px;
+  min-width: 360px;
+  padding: 0;
+  position: relative;
   text-align: right;
-  right: 30px;
-  top: 30px;
+  width: 40%;
 }
 header .links .above {
-  font-size: 1.2em;
+  background-color: #000;
+  font-size: 1.3em;
+  padding: 15px 15px 5px 15px;
+}
+header .links .above li {
+  margin-right: 1.5em;
+}
+header .links .above li:last-child {
+  margin-right: 0;
+}
+header .links .above li a {
+  color: #fff;
 }
 header .links .below {
-  font-size: 1.5em;
+  font-size: 1.9em;
+  padding: 0px 15px;
+}
+header .links .below li {
+  margin-right: 1.5em;
+}
+header .links .below li:last-child {
+  margin-right: 0;
+}
+header a {
+  color: #fff;
+}
+header a:hover {
+  color: #fff;
+}
+header a i {
+  font-size: 70px;
+  display: inline-block;
+  margin-top: 10px;
+}
+header .icn-hm-social-big {
+  display: inline-block;
+  float: right;
+  height: 90px;
+  line-height: 1;
+  min-width: 120px;
+  text-align: center;
+  width: 20%;
+  vertical-align: top;
 }
 header ul li {
   display: inline-block;
-  margin-right: 15px;
-}
-header ul li:last-child {
-  margin-right: 0;
 }
 .container {
-  padding: 0;
+  height: 100%;
   width: 100%;
+  position: relative;
+  transform: translate3d(0, 0, 0);
 }
-.container a {
+.row {
+  margin: 0;
+}
+.view {
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  perspective: 1000;
+  width: 100%;
+  z-index: -9999999;
+}
+.view a {
   color: #fff;
 }
-.container a i {
+.view a i {
   font-size: 100px;
   display: inline-block;
+  margin-top: 10px;
 }
-.container .icn-hm-social-big {
+.view .icn-hm-social-big {
   display: inline-block;
   height: 20%;
   line-height: 1;
-  min-width: 100px;
+  min-width: 0px;
+  opacity: 1;
   text-align: center;
   width: 10%;
   vertical-align: top;
 }
-.container .info {
+.info {
+  float: left;
   height: auto;
-  width: 30%;
+  min-width: 240px;
+  opacity: 1;
+  width: 60%;
   background-color: #fff;
-  position: absolute;
-  left: 30px;
-  bottom: 50px;
+  position: relative;
+  left: 0px;
   z-index: 999999;
   text-align: left;
 }
-.container .info p {
+.info p {
   color: #333;
-  font-size: 2em;
-  line-height: 1em;
-  padding: 15px 30px;
+  font-size: 2.3em;
+  line-height: 1.2em;
+  padding: 30px 30px;
 }
-.container .info .sub {
+.info .sub {
   font-size: 1.2em;
   padding: 0px 30px 5px 30px;
 }
-.container .info a {
+.info a {
   color: #ff5349;
+  text-decoration: underline;
+}
+.first {
+  margin-top: 150px;
+}
+.slideWrap {
+  margin-top: 3em;
+  margin-left: 1em;
+  margin-bottom: 3em;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+}
+.slide {
+  background-repeat: none;
+  background-color: #fff;
+  float: left;
+  margin: 1em;
+  height: auto;
+  min-height: 545px;
+  width: 600px;
+  padding: 30px;
+  border: 1px solid #ccc;
+}
+.slide a {
+  color: #000;
+  text-decoration: underline;
+}
+.slide ul {
+  margin: 0 0 10px;
+}
+.slide ul li {
+  list-style: inside;
+  margin-left: 15px;
+  list-style-type: none;
+}
+.slide .next {
+  float: right;
+  font-size: 1.2em;
+}
+.slide .next a {
+  color: #000;
   text-decoration: underline;
 }
 .fb {
@@ -180,6 +278,7 @@ a.tb:hover {
   -moz-transition: background 0.2s ease-in;
   -o-transition: background 0.2s ease-in;
   transition: background 0.2s ease-in;
+  cursor: pointer;
 }
 button.fb.small,
 button.tw.small,
@@ -372,4 +471,218 @@ a.tb.active,
   margin-right: 12px;
   margin-left: -22px;
   margin-top: -4px;
+}
+/*learn */
+body {
+  visibility: visible;
+}
+.tour-pins {
+  position: absolute;
+  top: 0;
+}
+.tour-pin {
+  -webkit-transition: background-image 0.2s ease-in-out;
+  -moz-transition: background-image 0.2s ease-in-out;
+  -ms-transition: background-image 0.2s ease-in-out;
+  -o-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;
+  background-image: url("http://d33w9bm0n1egwm.cloudfront.net/assets/splashPage/tour/Pin_Inactive.png");
+  width: 38px;
+  height: 67px;
+  position: absolute;
+  cursor: hand;
+  cursor: pointer;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  color: transparent;
+  display: none;
+  z-index: 5;
+  line-height: 200;
+}
+.tour-pin.active,
+.tour-pin:hover {
+  background-image: url("http://d33w9bm0n1egwm.cloudfront.net/assets/splashPage/tour/Pin_Active.png");
+  text-decoration: none !important;
+  color: transparent;
+}
+.tour-3d-info h1 {
+  font-weight: normal;
+  font-size: 42px;
+}
+.tour-3d-info h2 {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 14px;
+}
+.tour-3d-menu ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+.tour-3d-menu li {
+  height: 45px;
+  width: 215px;
+  border-bottom: 1px solid #ccc;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+.tour-3d-menu a {
+  color: #000 !important;
+}
+.tour-3d-menu .icon-angle-right {
+  position: absolute;
+  top: 6px;
+  right: -1px;
+  font-size: 27px;
+}
+.tour-3d-menu li:hover,
+.tour-3d-menu li.active,
+.tour-3d-menu a:hover,
+.tour-3d-menu .active a {
+  background-color: #ff5349;
+  color: #fff !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+}
+.tour-3d-menu-li-div {
+  padding: 13px;
+  font-size: 18px;
+}
+.tour-3d-graphic {
+  margin-left: -100px;
+  top: 51px;
+  right: -32px;
+}
+.tour-3d-graphic-embed,
+.tour-3d-graphic-moderate {
+  display: none;
+  position: absolute;
+  top: 0;
+}
+.tour-browser {
+  background-image: url("http://d33w9bm0n1egwm.cloudfront.net/assets/splashPage/tour/Browser_Window.png");
+  background-repeat: no-repeat;
+  width: 645px;
+  height: 462px;
+}
+.tour-analytics-h3 {
+  font-size: 32px;
+  margin-left: 92px;
+  margin-top: 19px;
+  letter-spacing: 0.05em;
+  margin-bottom: 27px;
+}
+.tour-analytics-engagement {
+  display: none;
+}
+.tour-analytics .tour-browser {
+  margin-left: -8px;
+}
+.tour-analytics-info {
+  margin-left: -34px;
+  margin-top: 52px;
+}
+.tour-analytics-info .btn-group {
+  margin-bottom: 49px;
+}
+.tour-analytics-info ul {
+  list-style: none;
+  margin-left: 0;
+}
+.tour-analytics-info li {
+  padding-bottom: 49px;
+}
+.tour-analytics-info i {
+  font-size: 28px;
+  color: #ff5349;
+}
+a.tour-analytics-info-btn {
+  font-size: 18px !important;
+  padding: 12px 29px;
+}
+.tour-analytics-title {
+  margin-top: -27px;
+  margin-left: 52px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+}
+.tour-analytics-description {
+  margin-left: 53px;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.tour-enterprise {
+  margin-top: 90px;
+}
+.tour-enterprise-h3 {
+  font-size: 32px;
+  margin-top: 53px;
+  margin-left: -1px;
+  letter-spacing: 0.05em;
+  margin-bottom: 39px;
+}
+.tour-enterprise-item {
+  margin-bottom: 46px;
+  width: 339px;
+}
+.tour-enterprise-title {
+  font-size: 23px;
+  text-transform: uppercase;
+  color: #ff5349;
+  margin-bottom: 14px;
+  line-height: 1.22;
+}
+.tour-enterprise-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.tour-enterprise-img {
+  width: 760px;
+  max-width: none;
+  margin-left: -93px;
+  margin-top: 3px;
+}
+.tour-cta {
+  margin-top: 44px;
+  height: 465px;
+  background-image: url("http://d33w9bm0n1egwm.cloudfront.net/assets/splashPage/tour/COA_Bkg.png");
+  -webkit-animation: bgmove 50s linear infinite;
+}
+.tour-cta-center {
+  position: relative;
+  top: 123px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 480px;
+  text-align: center;
+}
+.tour-cta-title {
+  font-size: 41px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+  text-shadow: 0px 0px 10px #000;
+  margin-bottom: 53px;
+}
+.tour-cta-signup,
+.tour-cta-pricing {
+  width: 420px;
+  font-size: 26px;
+  padding: 16px 17px;
+  margin-bottom: 13px;
+  border: none;
+}
+.tour-cta-signup,
+.tour-cta-pricing,
+.tour-cta-examples {
+  color: #fff !important;
+  font-size: 19px;
+  position: relative;
+  top: 10px;
 }

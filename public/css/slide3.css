@@ -1,0 +1,8 @@
+
+.container {
+	background-color: #FD6A62;
+	  -webkit-transition: all 1.5s ease
+    }
+header {
+	display: none
+}
