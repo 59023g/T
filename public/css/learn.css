@@ -1,0 +1,50 @@
+.splash-acct-nav.clearfix, .info {
+	
+	-webkit-transition: opacity 1s ease-out;
+  opacity: 0; 
+	display: none
+	
+}
+
+header {
+	z-index: 9999999
+}
+header .links, header .links .above{
+		background-color: white;
+		color: #333
+}
+
+header a, header a:hover {
+	color: #333;
+
+}
+
+.links {
+
+}
+header .links .above li a {
+	color: #333
+}
+
+header .links .above li a:hover {
+	color: #333
+}
+
+.above {
+		background-color: white;
+
+}
+
+.logo {
+	z-index: 9999999;
+	  	    float: left;
+    height: 65px;
+    margin-left: 15px;
+    width: 65px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: -9999999;
+    left: 0;
+    bottom: 0
+}

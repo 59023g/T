@@ -1,0 +1,22 @@
+.slideLeft.ng-enter, .slideLeft.ng-leave, .slideRight.ng-enter, .slideRight.ng-leave
+  -webkit-transition all 1s
+  transition all 1s
+
+.slideLeft
+  &.ng-enter
+    left 100%
+    &.ng-enter-active
+      left 0
+  &.ng-leave
+    &.ng-leave-active
+      left -100%
+
+.slideRight
+  &.ng-enter
+    left -100%
+    &.ng-enter-active
+      left 0
+  &.ng-leave
+    &.ng-leave-active
+      left 100%
+
