@@ -1,8 +1,5 @@
-
-.container{
-	background-color: #fff;
-	  -webkit-transition: all 1.5s ease
-    }
 header {
-	display: none
+  display: none;
+  visibility: hidden;
+  opacity: 0
 }
