@@ -24,7 +24,7 @@ var tint = angular.module('tint', [
         templateUrl: 'partials/three',
         controller: 'doController',
         //animate: 'slideLeft',
-        css: 'css/slide3.css'
+        css: 'css/slide2.css'
       })  
       .when('/', {
         templateUrl: 'partials/main',
