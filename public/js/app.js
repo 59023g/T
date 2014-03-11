@@ -9,21 +9,6 @@ var tint = angular.module('tint', [
 ])
   .config(function($routeProvider, $httpProvider, $locationProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'partials/main',
-        controller: 'doController',
-      })
-      .when('/learn', {
-        templateUrl: 'partials/learn',
-        controller: 'doController',
-        css: 'css/learn.css'
-      })
-      .when('/pricing', {
-        templateUrl: 'partials/pricing',
-        controller: 'doController',
-        css: 'css/learn.css'
-        //animate: 'slideLeft'
-      })
       .when('/one', {
         templateUrl: 'partials/one',
         controller: 'doController',
@@ -39,8 +24,23 @@ var tint = angular.module('tint', [
         templateUrl: 'partials/three',
         controller: 'doController',
         //animate: 'slideLeft',
-        css: 'css/slide3.css'
-      })            
+        css: 'css/slide2.css'
+      })  
+      .when('/', {
+        templateUrl: 'partials/main',
+        controller: 'doController',
+      })
+      .when('/learn', {
+        templateUrl: 'partials/learn',
+        controller: 'doController',
+        css: 'css/learn.css'
+      })
+      .when('/pricing', {
+        templateUrl: 'partials/pricing',
+        controller: 'doController',
+        css: 'css/learn.css'
+        //animate: 'slideLeft'
+      })          
       .otherwise({
         redirectTo: '/'
       });

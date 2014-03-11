@@ -1,8 +1,5 @@
-.slideWrap {
- 
-
-  
-}
 header {
-  display: none
+  display: none;
+  visibility: hidden;
+  opacity: 0
 }
