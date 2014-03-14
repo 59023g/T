@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Chatbuilder</title>
+  <script src="http://chatbuilder.hackreactor.com/ChatBuilder.js"></script>
+  <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <script>
+  //Chat.guide.start();
+  delete Chat.display;
+  delete Chat.fetch;
+  delete Chat.send;
+
+  var api = 'https://api.parse.com/1/classes/chats';
+  var loader = '<div style="position:absolute; top: 10px; right: 10px; width: auto; height: auto"><img src="http://michaelepierce.com/out/image_624228.gif"/></div>';
+  var apiReturn;
+  var messages;
+
+  Chat.fetch = function(paramFunc) {
+    if (paramFunc && (typeof paramFunc == "function")) {
+      $.ajax({
+        type: 'GET',
+        url: api,
+        dataType: "json",
+        beforeSend: function() {
+          $('.messages').prepend(loader);
+        },
+        complete: function(data) {
+          console.log("API returned.");
+          wholeResponse = data;
+          if (data.responseText) { //for async
+            responseText = JSON.parse(data.responseText); //JSON string from server into object
+            messages = responseText.results; // traversing object. shorten?
+            messages.sort(function(a, b) {
+              return a.updatedAt.localeCompare(b.updatedAt) // tested w/ a.text.localeCompare(b.text) --> http://jsfiddle.net/FCZUV/
+            });
+            $('.messages').find('img').remove().end().html();
+
+            paramFunc();
+
+          };
+        }
+      })
+    } else return "Fetch method must use function parameter"
+  };
+
+  Chat.display = function(string) {
+    // Test if coming from fetch method or testing display method locally
+    if (string && (typeof string == "string")) {
+      $('.messages').prepend("<li>" + username + ": " + string + "</li>")
+    } else {
+      $.each(messages, function(i, message) {
+        var html = "<li>" + message.text + /*" " + message.createdAt +*/ "</li>";
+        $('.messages').hide().prepend(html).fadeIn('fast')
+        console.log("Sorted.")
+      });
+    }
+  };
+
+  Chat.send = function(string) {
+    var message = {
+      "text": username + ": " + string
+    }
+    strMessage = JSON.stringify(message)
+    $.ajax({
+      type: 'POST',
+      url: api,
+      dataType: "json",
+      data: strMessage
+    })
+
+  };
+
+  $(document).ready(function() {
+    Chat.fetch(Chat.display)
+    setInterval(run, 3000);
+
+    function run() {
+      Chat.fetch(Chat.display)
+
+    }
+  });
+  </script>
+
+  <form id="message" action="javascript: console.log('Form Success');">
+    <input placeholder="Enter Message" class="draft" type="text" />
+    <button class="send" id="submitf" type="submit">Send</button>
+  </form>
+
+  <ul class="messages">
+
+  </ul>
+
+  <script>
+  $("form").submit(function(String) {
+
+    var message = $('.draft').val();
+    Chat.send(message)
+
+    function resetForm($form) {
+      $form.find('input:text,select, textarea').val('');
+    }
+    resetForm($('#message'));
+
+
+  })
+  </script>
+
+  <script>
+  // http://stackoverflow.com/a/3855394
+  (function($) {
+    $.QueryString = (function(a) {
+      if (a == "") return {};
+      var b = {};
+      for (var i = 0; i < a.length; ++i) {
+        var p = a[i].split('=');
+        if (p.length != 2) continue;
+        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+      }
+      return b;
+    })(window.location.search.substr(1).split('&'))
+  })(jQuery);
+
+  var username = $.QueryString["username"]
+  </script>
+</body>
+
+</html>

@@ -9,18 +9,18 @@ var tint = angular.module('tint', [
 ])
   .config(function($routeProvider, $httpProvider, $locationProvider) {
     $routeProvider
-      .when('/one', {
-        templateUrl: 'partials/one',
+      .when('/process', {
+        templateUrl: 'partials/two',
         controller: 'doController',
-        css: 'css/slide.css'
+        css: 'css/slide2.css'
       })
-      .when('/two', {
+      .when('/process', {
         templateUrl: 'partials/two',
         controller: 'doController',
         //animate: 'slideLeft',
         css: 'css/slide2.css'
       }) 
-      .when('/three', {
+      .when('/build', {
         templateUrl: 'partials/three',
         controller: 'doController',
         //animate: 'slideLeft',
